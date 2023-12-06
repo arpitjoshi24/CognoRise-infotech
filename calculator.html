@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+    <style>
+        body{
+            background: url(https://images.pexels.com/photos/255379/pexels-photo-255379.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+            background-repeat: no-repeat;
+            background-size: cover;
+            font-weight: bolder;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100 flex items-center justify-center h-screen">
+
+    <div class="bg-black  p-8 rounded shadow-md w-80">
+        <!-- Calculator Screen -->
+        <div class="mb-4">
+            <input type="text" id="screen" class="w-full px-3 py-2 border border-gray-300 rounded" readonly>
+        </div>
+    
+        <!-- Calculator Buttons -->
+        <div class="grid grid-cols-4 gap-2">
+            <button class="col-span-2 bg-gray-300 hover:bg-gray-400 py-2 rounded" onclick="clearScreen()">C</button>
+            <button class="bg-gray-300 hover:bg-gray-400 py-2 rounded" onclick="appendToScreen('/')">/</button>
+            <button class="bg-gray-300 hover:bg-gray-400 py-2 rounded" onclick="appendToScreen('*')">*</button>
+    
+            <button class="bg-gray-300 hover:bg-gray-400 py-2 rounded" onclick="appendToScreen('7')">7</button>
+            <button class="bg-gray-300 hover:bg-gray-400 py-2 rounded" onclick="appendToScreen('8')">8</button>
+            <button class="bg-gray-300 hover:bg-gray-400 py-2 rounded" onclick="appendToScreen('9')">9</button>
+            <button class="bg-gray-300 hover:bg-gray-400 py-2 rounded" onclick="appendToScreen('-')">-</button>
+    
+            <button class="bg-gray-300 hover:bg-gray-400 py-2 rounded" onclick="appendToScreen('4')">4</button>
+            <button class="bg-gray-300 hover:bg-gray-400 py-2 rounded" onclick="appendToScreen('5')">5</button>
+            <button class="bg-gray-300 hover:bg-gray-400 py-2 rounded" onclick="appendToScreen('6')">6</button>
+            <button class="bg-gray-300 hover:bg-gray-400 py-2 rounded" onclick="appendToScreen('+')">+</button>
+    
+            <button class="bg-gray-300 hover:bg-gray-400 py-2 rounded" onclick="appendToScreen('1')">1</button>
+            <button class="bg-gray-300 hover:bg-gray-400 py-2 rounded" onclick="appendToScreen('2')">2</button>
+            <button class="bg-gray-300 hover:bg-gray-400 py-2 rounded" onclick="appendToScreen('3')">3</button>
+            <button class="bg-gray-300 hover:bg-gray-400 py-2 rounded" onclick="calculate()">=</button>
+    
+            <button class=" col-span-2 bg-gray-300 hover:bg-gray-400 py-2 rounded" onclick="appendToScreen('0')">0</button>
+            <button class="bg-gray-300 hover:bg-gray-400 py-2 rounded" onclick="appendToScreen('.')">.</button>
+            <button class="bg-gray-300 hover:bg-gray-400 py-2 rounded" onclick="appendToScreen('%')">%</button>
+        </div>
+    </div>
+    
+    <script>
+        // JavaScript functions to handle calculator operations
+        function appendToScreen(value) {
+            document.getElementById('screen').value += value;
+        }
+    
+        function clearScreen() {
+            document.getElementById('screen').value = '';
+        }
+    
+        function calculate() {
+            try {
+                document.getElementById('screen').value = eval(document.getElementById('screen').value);
+            } catch (error) {
+                document.getElementById('screen').value = 'Error';
+            }
+        }
+    </script>
+    
+    </body>
+
+</html>
+
+
+

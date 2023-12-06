@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Document</title>
+
+  <style>
+    @import 'tailwindcss/base';
+    @import 'tailwindcss/components';
+    @import 'tailwindcss/utilities';
+
+
+
+    .nav-link {
+      color: #fff;
+    }
+
+    /* Hamburger Icon Styles */
+    .hamburger {
+      display: none;
+      /* Hide the hamburger icon by default on larger screens */
+    }
+
+    /* Media Query for Mobile */
+    @media (max-width: 768px) {
+      .hamburger {
+        display: block;
+        /* Display the hamburger icon on smaller screens */
+      }
+
+      .nav-links {
+        display: none;
+        /* Hide the navigation links on smaller screens by default */
+      }
+
+      .nav-links.show {
+        display: block;
+        /* Show the navigation links when the menu is open */
+      }
+    }
+
+    #grad1 {
+      height: 390px;
+      border: 3px solid red;
+    }
+
+    #grad2 {
+      height: 390px;
+      border: 3px solid blue;
+
+    }
+
+    #grad3 {
+      height: 390px;
+      border: 3px solid yellow;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .service:hover {
+      animation: fadeInUp 1.5s ease-out;
+    }
+
+    * {
+      scroll-behavior: smooth;
+    }
+
+    @keyframes fade-in {
+      0% {
+        opacity: 0;
+      }
+
+      100% {
+        opacity: 1;
+      }
+    }
+
+    .animate-fade-in {
+      animation: fade-in 1s ease-in-out;
+    }
+
+
+
+
+    
+  </style>
+
+  </style>
+</head>
+
+<body class="bg-black">
+  <section>
+
+    <nav class="text-white">
+      <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+        <a href="https://flowbite.com/" class="flex items-center">
+
+          <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Arpit</span>
+        </a>
+        <button data-collapse-toggle="navbar-default" type="button"
+          class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+          aria-controls="navbar-default" aria-expanded="false">
+          <span class="sr-only">Open main menu</span>
+          <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M1 1h15M1 7h15M1 13h15" />
+          </svg>
+        </button>
+        <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+          <ul
+            class="font-medium flex flex-col p-4 md:p-0 mt-4 border b rounded-lg b md:flex-row md:space-x-8 md:mt-0 md:border-0 ">
+            <li>
+              <a href="#home" class="block py-1 px-2 text-white  rounded-xl  hover:text-black hover:bg-white">Home</a>
+            </li>
+            <li>
+              <a href="#about" class="block py-1 px-2 text-white  rounded-xl  hover:text-black hover:bg-white">About</a>
+            </li>
+            <li>
+              <a href="#oservices"
+                class="block py-1 px-2 text-white  rounded-xl  hover:text-black hover:bg-white">Services</a>
+            </li>
+            <li>
+              <a href="#skiils"
+                class="blockS py-1 px-2 text-white  rounded-xl  hover:text-black hover:bg-white">skills</a>
+            </li>
+            <li>
+              <a href="#contact"
+                class="block py-1 px-2 text-white  rounded-xl  hover:text-black hover:bg-white">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- home section -->
+    <section id="home">
+      <div class=" block sm:flex text-white">
+        <div class="mx-4 sm:ml-56  my-24 sm:my-44">
+          <h1 class="text-6xl">hello<span class="text-green-600">.</span></h1>
+          <h3 class="text-3xl sm:text-4xl pt-4"> <span class="text-green-600">&#8212;</span> i'am Arpit Joshi</h3>
+          <h2 class="text-xl font-semibold mt-5"><span id="typewriter" class="typewriter-animation"> </span>.</h2>
+          <button class="px-2 py-1 mt-6 bg-green-600 hover:bg-green-700">download cv</button>
+
+        </div>
+        <div class=" ">
+          <img class="hidden sm:block ml-2 sm:ml-80 grayscale hover:grayscale-0  service"
+            src="photo_2023-09-26_20-55-24-removebg-preview.png" alt="" width="500vw">
+        </div>
+      </div>
+    </section>
+
+    <!-- about me -->
+    <section class="mt-12 " id="about">
+      <h1 class="text-6xl  ml-2 pl-1 sm:ml-96 sm:pl-80 text-green-600 ">About Me</h1>
+      <div class=" block sm:flex mt-24">
+        <div class="mx-4 sm:ml-56">
+          <img class="grayscale hover:grayscale-0 hover:shadow-2xl hover:shadow-blue-300 service"
+            src="photo_2023-06-10_00-04-02.jpg" alt="" width="500vw">
+        </div>
+        <div class="">
+
+          <p class="mt-4 text-xl text-white mt-24 mx-4 sm:mx-24 ">Hi i'm ARPIT , a front-end Web Developer from India,
+            and
+            i've more than 5 months of web designing experience.</p>
+          <p class="mt-4 text-xl text-white mt-1  mx-4 sm:mx-24">I love to combining the logic and creative design to
+            make user friendly websites. I create custom websites to help enterpreneurs to do better
+            online.</p>
+          <button
+            class=" mt-4 text-lg text-white mt-1 ml-6 sm:ml-96 px-2 py-1 mt-6 bg-green-600 hover:bg-green-700">learn
+            more</button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- projects section -->
+    <section >
+      <h1 class="text-6xl  ml-2 pl-1 sm:ml-96 sm:pl-80 text-green-600  mt-16  " id="oservices">Projects</h1>
+      <section class="text-white body-font">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="flex flex-wrap w-full mb-20 flex-col items-center text-center">
+
+            <p class="lg:w-1/2 w-full leading-relaxed text-white">These are my showcase of a variety of projects with
+              discription</p>
+          </div>
+          <div class="flex flex-wrap -m-4  ">
+            <div class="xl:w-1/3 md:w-1/2 p-4">
+              <div class="border border-gray-200 p-6 rounded-lg">
+                <div
+                  class="w-10 h-10 inline-flex items-center justify-center rounded-full bg-green-100 text-green-500 mb-4">
+                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    class="w-6 h-6" viewBox="0 0 24 24">
+                    <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                  </svg>
+                </div >
+                <h2 class="text-lg text-green-600  font-medium title-font mb-2">Tribute page</h2>
+                <p class="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit waist co, subway tile
+                  poke farm.</p>
+              </div>
+            </div>
+            <div class="xl:w-1/3 md:w-1/2 p-4">
+              <div class="border border-gray-200 p-6 rounded-lg">
+                <div
+                  class="w-10 h-10 inline-flex items-center justify-center rounded-full bg-green-100 text-green-500 mb-4">
+                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    class="w-6 h-6" viewBox="0 0 24 24">
+                    <circle cx="6" cy="6" r="3"></circle>
+                    <circle cx="6" cy="18" r="3"></circle>
+                    <path d="M20 4L8.12 15.88M14.47 14.48L20 20M8.12 8.12L12 12"></path>
+                  </svg>
+                </div>
+                <h2 class="text-lg text-green-600 font-medium title-font mb-2"> Basic Portfolio </h2>
+                <p class="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit waist co, subway tile
+                  poke farm.</p>
+              </div>
+            </div>
+            <div class="xl:w-1/3 md:w-1/2 p-4">
+              <div class="border border-gray-200 p-6 rounded-lg">
+                <div
+                  class="w-10 h-10 inline-flex items-center justify-center rounded-full bg-green-100 text-green-500 mb-4">
+                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    class="w-6 h-6" viewBox="0 0 24 24">
+                    <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
+                    <circle cx="12" cy="7" r="4"></circle>
+                  </svg>
+                </div>
+                <h2 class="text-lg text-green-600 font-medium title-font mb-2">TO-DO-List</h2>
+                <p class="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit waist co, subway tile
+                  poke farm.</p>
+              </div>
+            </div>
+            <div class="xl:w-1/3 md:w-1/2 p-4">
+              <div class="border border-gray-200 p-6 rounded-lg">
+                <div
+                  class="w-10 h-10 inline-flex items-center justify-center rounded-full bg-green-100 text-green-500 mb-4">
+                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    class="w-6 h-6" viewBox="0 0 24 24">
+                    <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1zM4 22v-7"></path>
+                  </svg>
+                </div>
+                <h2 class="text-lg text-green-600 font-medium title-font mb-2">Project Management Tool</h2>
+                <p class="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit waist co, subway tile
+                  poke farm.</p>
+              </div>
+            </div>
+            <div class="xl:w-1/3 md:w-1/2 p-4">
+              <div class="border border-gray-200 p-6 rounded-lg">
+                <div
+                  class="w-10 h-10 inline-flex items-center justify-center rounded-full bg-green-100 text-green-500 mb-4">
+                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    class="w-6 h-6" viewBox="0 0 24 24">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                  </svg>
+                </div>
+                <h2 class="text-lg text-green-600 font-medium title-font mb-2">Basic Calculator</h2>
+                <p class="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit waist co, subway tile
+                  poke farm.</p>
+              </div>
+            </div>
+            <div class="xl:w-1/3 md:w-1/2 p-4">
+              <div class="border border-gray-200 p-6 rounded-lg">
+                <div
+                  class="w-10 h-10 inline-flex items-center justify-center rounded-full bg-green-100 text-green-500 mb-4">
+                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    class="w-6 h-6" viewBox="0 0 24 24">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                  </svg>
+                </div>
+                <h2 class="text-lg text-green-600 font-medium title-font mb-2">E-Commerce Webpage</h2>
+                <p class="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit waist co, subway tile
+                  poke farm.</p>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </section>
+    </section>
+
+
+    <!-- services -->
+    <section>
+      <h1 class="text-6xl  ml-2 pl-1 sm:ml-80 sm:pl-80 text-green-600  mt-16  " id="oservices">our services</h1>
+      <div class="flex sm:flex-row flex-col text-white justify-evenly mt-20 space-x-2 ">
+        <div
+          class=" rainbow-border text-white py-4 px-2 w-96 h-auto shadow hover:shadow-2xl  hover:shadow-red-700 my-5 sm:my-0 mx-2 sm:mx-0 transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110"
+          id="grad1">
+          <h1 class="text-red-500 text-5xl">Bootstrap</h1>
+          <p class="py-3 text-lg">As a Bootstrap Developer, I am dedicated to delivering high-quality and visually
+            appealing websites that provide an exceptional user experience across devices. My skills in HTML, CSS,
+            JavaScript, and Bootstrap enable me to create responsive and dynamic web applications. I am passionate about
+            staying up-to-date with the latest web development trends and technologies. I look forward to the
+            opportunity of contributing to projects and creating innovative solutions.</p>
+        </div>
+        <div
+          class="py-4 px-2 w-96 rainbow-border h-auto shadow hover:shadow-2xl  hover:shadow-blue-600  my-5 sm:my-0 mx-2 sm:mx-0 transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110"
+          id="grad2">
+          <h1 class="text-blue-600 text-5xl ">Tailwindcss</h1>
+          <p class="py-3 text-lg">I am dedicated to creating modern and visually appealing web interfaces using the
+            power and flexibility of Tailwind CSS. My expertise in HTML, CSS, JavaScript, and Tailwind allows me to
+            build responsive and highly customizable websites. I am passionate about staying up-to-date with the latest
+            web development trends and technologies, continuously expanding my skill set..</p>
+        </div>
+        <div id="grad3"
+          class="py-4 rainbow-border px-2 w-96 h-auto shadow hover:shadow-2xl  hover:shadow-yellow-300 my-5 sm:my-0 mx-2 sm:mx-0 transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110">
+          <h1 class="text-yellow-500 text-5xl ">Web Designing</h1>
+          <p class="py-3 text-lg">I am passionate about creating visually stunning and user-centric websites that leave
+            a lasting impression. With a keen eye for design, attention to detail, and a deep understanding of user
+            experience, I strive to craft engaging digital experiences.</p>
+        </div>
+      </div>
+    </section>
+
+
+
+
+    <!-- skills -->
+    <section class="text-white " id="skills">
+      <h1 class="text-6xl  ml-2 pl-1 sm:ml-96 sm:pl-80 text-green-600  mt-16  " id="skills">skills</h1>
+      <div class="flex mt-12">
+        <div class="transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110">
+          <label for="file" class="ml-6 sm:ml-96 text-2xl">html/css</label>
+          <br>
+          <progress id="file" class="ml-6 sm:ml-96" value="82" max="100"> 32% </progress>
+        </div>
+        <div class="transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110">
+          <label for="file" class="ml-6 sm:ml-96 text-2xl">Bootstrap</label>
+          <br>
+          <progress id="file" class="ml-6 sm:ml-96" value="60" max="100"> 32% </progress>
+        </div>
+
+      </div>
+      <div class="flex mt-6">
+        <div class="transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110">
+          <label for="file" class="ml-6 sm:ml-96 text-2xl">JavaScript</label>
+          <br>
+          <progress id="file" class=" ml-6 sm:ml-96" value="22" max="100"> 32% </progress>
+        </div>
+        <div class="transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110">
+          <label for="file" class="ml-6 sm:ml-96 text-2xl">Tailwindcss</label>
+          <br>
+          <progress id="file" class="ml-6 sm:ml-96" value="72" max="100"> 32% </progress>
+        </div>
+
+      </div>
+      <div class="flex mt-6">
+        <div class="transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110">
+          <label for="file" class="ml-6 sm:ml-96 text-2xl">MySQL</label>
+          <br>
+          <progress id="file" class="ml-6 sm:ml-96" value="55" max="100"> 32% </progress>
+        </div>
+        <div class="transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110">
+          <label for="file" class="ml-6 sm:ml-96 text-2xl">API</label>
+          <br>
+          <progress id="file" class="ml-6 sm:ml-96" value="10" max="100"> 32% </progress>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- blog section -->
+    <section>
+      <div>
+        <h1 class="text-6xl  ml-2 pl-1 sm:ml-96 sm:pl-80 text-green-600  mt-16  " id="oservices">Blog</h1>
+        <section class="text-gray-600 body-font overflow-hidden">
+          <div class="container px-5 py-24 mx-auto">
+            <div class="-my-8 divide-y-2 divide-gray-100">
+              <div class="py-8 flex flex-wrap md:flex-nowrap">
+                <div class="md:w-64 md:mb-0 mb-6 flex-shrink-0 flex flex-col">
+                  <span class="font-semibold title-font text-white">CATEGORY</span>
+                  <span class="mt-1 text-white text-sm">12 Jun 2019</span>
+                </div>
+                <div class="md:flex-grow">
+                  <h2 class="text-2xl font-medium text-white title-font mb-2">Bitters hashtag waistcoat fashion axe chia
+                    unicorn</h2>
+                  <p class="leading-relaxed text-white">Glossier echo park pug, church-key sartorial biodiesel
+                    vexillologist pop-up snackwave ramps cornhole. Marfa 3 wolf moon party messenger bag selfies, poke
+                    vaporware kombucha lumbersexual pork belly polaroid hoodie portland craft beer.</p>
+                  <a class="text-green-500 inline-flex items-center mt-4">Learn More
+                    <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"
+                      stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M5 12h14"></path>
+                      <path d="M12 5l7 7-7 7"></path>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+              <div class="py-8 flex flex-wrap md:flex-nowrap">
+                <div class="md:w-64 md:mb-0 mb-6 flex-shrink-0 flex flex-col">
+                  <span class="font-semibold title-font text-white">CATEGORY</span>
+                  <span class="mt-1 text-white text-sm">12 Jun 2019</span>
+                </div>
+                <div class="md:flex-grow">
+                  <h2 class="text-2xl font-medium text-white title-font mb-2">Meditation bushwick direct trade taxidermy
+                    shaman</h2>
+                  <p class="leading-relaxed text-white">Glossier echo park pug, church-key sartorial biodiesel
+                    vexillologist pop-up snackwave ramps cornhole. Marfa 3 wolf moon party messenger bag selfies, poke
+                    vaporware kombucha lumbersexual pork belly polaroid hoodie portland craft beer.</p>
+                  <a class="text-green-500 inline-flex items-center mt-4">Learn More
+                    <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"
+                      stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M5 12h14"></path>
+                      <path d="M12 5l7 7-7 7"></path>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+              <div class="py-8 flex flex-wrap md:flex-nowrap">
+                <div class="md:w-64 md:mb-0 mb-6 flex-shrink-0 flex flex-col">
+                  <span class="font-semibold title-font text-white">CATEGORY</span>
+                  <span class="text-sm text-white">12 Jun 2019</span>
+                </div>
+                <div class="md:flex-grow">
+                  <h2 class="text-2xl text-white font-medium  title-font mb-2">Woke master cleanse drinking vinegar
+                    salvia</h2>
+                  <p class=" text-white leading-relaxed">Glossier echo park pug, church-key sartorial biodiesel
+                    vexillologist pop-up snackwave ramps cornhole. Marfa 3 wolf moon party messenger bag selfies, poke
+                    vaporware kombucha lumbersexual pork belly polaroid hoodie portland craft beer.</p>
+                  <a class="text-green-500 inline-flex items-center mt-4">Learn More
+                    <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"
+                      stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M5 12h14"></path>
+                      <path d="M12 5l7 7-7 7"></path>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </section>
+    <!-- contact section -->
+    <section id="contact">
+      <div class="text-white  py-12">
+        <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="tetx-white shadow-md rounded-lg overflow-hidden">
+            <div class="p-4 sm:p-6">
+              <h2 class="text-5xl font-semibold text-green-600">Contact Us</h2>
+              <p class=" mt-2">Have questions? Reach out to us!</p>
+
+              <form class="mt-6">
+                <div class="mb-4">
+                  <label class="block  text-sm font-semibold mb-2" for="name">Name</label>
+                  <input
+                    class="w-full px-3 py-2 t border text-black rounded-lg focus:outline-none focus:border-indigo-500"
+                    type="text" id="name" placeholder="Your name" required />
+                </div>
+                <div class="mb-4">
+                  <label class="block  text-sm font-semibold mb-2" for="email">Email</label>
+                  <input
+                    class="w-full px-3 py-2 text-black border rounded-lg focus:outline-none focus:border-indigo-500"
+                    type="email" id="email" placeholder="Your email" required />
+
+                </div>
+                <div class="mb-4">
+                  <label class="block  text-sm font-semibold mb-2" for="message">Message</label>
+                  <textarea
+                    class="w-full px-3 py-2 text-black border rounded-lg focus:outline-none focus:border-indigo-500"
+                    id="message" rows="4" placeholder="Your message" required></textarea>
+                </div>
+                <div class="mt-6">
+                  <button
+                    class="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 focus:outline-none focus:bg-indigo-600"
+                    type="submit" onclick="save()">
+                    Send Message
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- footer -->
+    <footer class="bg-gray-900 text-gray-300 py-4">
+      <div class="container mx-auto text-center">
+        <p>&copy; 2023 Arpit Joshi. All rights reserved.</p>
+      </div>
+    </footer>
+
+
+
+    <!-- js -->
+    <script>
+      function typeWriter() {
+        const text = "Professional Web Designer";
+        const typewriter = document.getElementById('typewriter');
+        let i = 0;
+        const speed = 150;
+
+        function type() {
+          if (i < text.length) {
+            typewriter.innerHTML += text.charAt(i);
+            i++;
+            setTimeout(type, speed);
+          } else {
+            typewriter.innerHTML = ''; // Clear the text
+            i = 0; // Reset the index
+            setTimeout(type, speed); // Start again
+          }
+        }
+
+        type();
+      }
+
+      document.addEventListener('DOMContentLoaded', typeWriter);
+
+      function save() {
+        alert("your message is send successfully")
+      }
+
+    </script>
+</body>
+
+</html>
